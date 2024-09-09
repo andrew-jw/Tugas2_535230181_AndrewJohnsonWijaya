@@ -1,13 +1,58 @@
 <!DOCTYPE html>
+
 <head>
+
     <title>
+
         Kalkulator
+
     </title>
+
+    <script>
+
+        function tambah(id, bil1, bil2) {
+            document.getElementById(id).value = Number(bil1) + Number(bil2);
+        }
+        
+        function kurang(id, bil1, bil2) {
+            document.getElementById(id).value = Number(bil1) - Number(bil2);
+        }
+
+        function kali(id, bil1, bil2) {
+            document.getElementById(id).value = Number(bil1) * Number(bil2);
+        }
+
+        function bagi(id, bil1, bil2) {
+            document.getElementById(id).value = Number(bil1) / Number(bil2);
+        }
+
+    </script>
+
 </head>
+
 <body>
+
     <h4>Bil 1</h4>  
-    <input type="number"> 
+    <input type="number" id="bil1" /> 
     <h4>Bil 2</h4>
-    <input type="number">
+    <input type="number" id="bil2" />
+
+    <br> <br>
+
+    <button type="button" onclick='tambah("hasilTambah", document.getElementById("bil1").value, document.getElementById("bil2").value)'> + </button>
+    <button type="button" onclick='kurang("hasilKurang", document.getElementById("bil1").value, document.getElementById("bil2").value)'> - </button>
+    <button type="button" onclick='kali("hasilKali", document.getElementById("bil1").value, document.getElementById("bil2").value)'> x </button>
+    <button type="button" onclick='bagi("hasilBagi", document.getElementById("bil1").value, document.getElementById("bil2").value)'> / </button>
+
+    <h4>Hasil Penjumlahan</h4>
+    <input type="number" id="hasilTambah" readonly />
+    <h4>Hasil Pengurangan</h4>
+    <input type="number" id="hasilKurang" readonly />
+    <h4>Hasil Perkalian</h4>
+    <input type="number" id="hasilKali" readonly />
+    <h4>Hasil Pembagian</h4>
+    <input type="number" id="hasilBagi" readonly />
+
 </body>
+
 </html>

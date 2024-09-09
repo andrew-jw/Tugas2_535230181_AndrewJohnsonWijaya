@@ -5,60 +5,44 @@
     <head>
 
         <title>
+
             Konversi
+
         </title>
 
         <script>
-            var huruf = [];
-            var isiArray = [];
 
-            function konversi(angka) {
-                if (angka >= 0 && angka <= 40) {
-                    huruf.push("E");
-                    document.getElementById("idHuruf").value="";
-                    document.getElementById("idHuruf").focus();
-                }
-                else if (angka >= 41 && angka <= 55) {
-                    huruf.push("D");
-                    document.getElementById("idHuruf").value="";
-                    document.getElementById("idHuruf").focus();
-                }
-                else if (angka >= 56 && angka <= 70) {
-                    huruf.push("C");
-                    document.getElementById("idHuruf").value="";
-                    document.getElementById("idHuruf").focus();
-                }
-                else if (angka >= 71 && angka <= 80) {
-                    huruf.push("B");
-                    document.getElementById("idHuruf").value="";
-                    document.getElementById("idHuruf").focus();
-                }
-                else if (angka >= 81 && angka <= 100) {
-                    huruf.push("A");
-                    document.getElementById("idHuruf").value="";
-                    document.getElementById("idHuruf").focus();
-                }
-                else {
-                    alert('Angka tidak valid!')
-                }
+        function konversiNilai(nilai) {
+            if (nilai >= 0 && nilai <= 40) {
+                alert("E");
             }
+            else if (nilai >= 41 && nilai <= 55) {
+                alert("D");
+            }
+            else if (nilai >= 56 && nilai <= 70) {
+                alert("C");
+            }
+            else if (nilai >= 71 && nilai <= 80) {
+                alert("B");
+            }
+            else if (nilai >= 81 && nilai <= 100) {
+                alert("A");
+            }
+            else {
+                alert("Nilai tidak valid!");
+            }
+        }
 
-            function menampilkanHuruf() {
-                var isiArray;
-                for (isiArray of huruf) {
-                    document.getElementById("hasilHuruf").innerHTML += isiArray + "<br />";
-                }
-            }
         </script>
 
     </head>
-
+    
     <body>
-        <input type="number" placeholder="Type any number">
-        <button type="button" onclick='konversi(document.getElementById("idHuruf").value)'>Submit Angka</button>
-        <button type="button" onclick='menampilkanHuruf()'>Tampilkan Huruf</button>
-        
-        <p id="hasilHuruf"></p>
+
+    <h4>Konversi Nilai: </h4>
+    <input type="number" id="idNilai" placeholder="Tulis Nilai"/>
+    <button type="button" onclick='konversiNilai(document.getElementById("idNilai").value)'>konversi</button>
+
     </body>
 
 </html>
